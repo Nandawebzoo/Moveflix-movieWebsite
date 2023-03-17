@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <script src="carousel.js"></script>
+    
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My style -->
+    <link rel="stylesheet" href="moveflix.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" alt="moveflix"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/library.html">Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-us.html">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex me-lg-2 mb-2 mb-lg-0" role="search">
+            <input
+              class="form-control me-1"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+
+          <button
+            class="btn btn-success"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#signInModal"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '/'" class="breadcr">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+        <li class="breadcrumb-item">
+          <a href="/contact-us.html">Contact Us</a>
+        </li>
+      </ol>
+    </nav>
+
+  
+    <!-- Movies -->
+    <div class="series">
+      <h3 class="title-library">Movies</h3>
+      <div class="row movie-row">
+        <div class="col-md-3 movie-album">
+          <div class="card mb-3 card-serie">
+            <img class="card-img-top" src="img/aadc.jpg" alt="" />
+            <button
+            class="btn btn-primary btn-watch"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#watchNowModal"
+            data-bs-image="img/aadc.jpg"
+            data-bs-title="Ada Apa Dengan Cinta"
+          >
+            More Details
+          </button>   
+        </div>
+      </div>
+      <div class="col-md-3 movie-album">
+        <div class="card mb-3 card-serie">
+          <img class="card-img-top" src="img/Spiderman.jpg" alt="" />
+            <button
+          class="btn btn-primary btn-watch"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#watchNowModal"
+          data-bs-image="img/Spiderman.jpg"
+          data-bs-title="Spider-Man: No Way Home"
+        >
+          More Details
+        </button>   
+      </div>
+    </div>
+    <div class="col-md-3 movie-album">
+      <div class="card mb-3 card-serie">
+        <img class="card-img-top" src="img/john-wick.jpeg" alt="" />
+          <button
+        class="btn btn-primary btn-watch"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#watchNowModal"
+        data-bs-image="img/john-wick.jpeg"
+        data-bs-title="John Wick: Chapter 4"
+
+      >
+        More Details
+      </button>   
+    </div>
+  </div>
+  <div class="col-md-3 movie-album">
+    <div class="card mb-3 card-serie">
+      <img class="card-img-top" src="img/mission.jpeg" alt="" />
+      <button
+      class="btn btn-primary btn-watch"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#watchNowModal"
+      data-bs-image="img/mission.jpeg"
+      data-bs-title="Mission: Impossible - Fallout"
+    >
+      More Details
+    </button>   
+  </div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/NO.jpeg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/NO.jpeg"
+    data-bs-title="No Time to Die"
+  >
+    More Details
+  </button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/Minion.jpg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/Minion.jpg"
+    data-bs-title="Minions: The Rise of Gru"
+  >
+    More Details
+  </button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/strange.jpeg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/strange.jpeg"
+    data-bs-title="Doctor Strange"
+  >
+    More Details
+  </button>  
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/army.jpeg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/army.jpeg"
+    data-bs-title="Army of the Dead"
+  >
+    More Details
+  </button>   
+  
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/parajpg.jpg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/parajpg.jpg"
+    data-bs-title="Parasite"
+  >
+    More Details
+  </button>    
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/black.jpg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/black.jpg"
+    data-bs-title="Black Adam"
+  >
+    More Details
+  </button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+  <div class="card mb-3 card-serie">
+    <img class="card-img-top" src="img/aadc.jpg" alt="" />
+    <button
+    class="btn btn-primary btn-watch"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#watchNowModal"
+    data-bs-image="img/aadc.jpg"
+    data-bs-title="Ada Apa Dengan Cinta"
+  >
+    More Details
+  </button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+  <img class="card-img-top" src="img/Spiderman.jpg" alt="" />
+    <button
+  class="btn btn-primary btn-watch"
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#watchNowModal"
+  data-bs-image="img/Spiderman.jpg"
+  data-bs-title="Spider-Man: No Way Home"
+>
+  More Details
+</button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/john-wick.jpeg" alt="" />
+  <button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/john-wick.jpeg"
+data-bs-title="John Wick: Chapter 4"
+
+>
+More Details
+</button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/mission.jpeg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/mission.jpeg"
+data-bs-title="Mission: Impossible - Fallout"
+>
+More Details
+</button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/NO.jpeg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/NO.jpeg"
+data-bs-title="No Time to Die"
+>
+More Details
+</button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/Minion.jpg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/Minion.jpg"
+data-bs-title="Minions: The Rise of Gru"
+>
+More Details
+</button>   
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/strange.jpeg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/strange.jpeg"
+data-bs-title="Doctor Strange"
+>
+More Details
+</button>  
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/army.jpeg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/army.jpeg"
+data-bs-title="Army of the Dead"
+>
+More Details
+</button>   
+
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/parajpg.jpg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/parajpg.jpg"
+data-bs-title="Parasite"
+>
+More Details
+</button>    
+</div>
+</div>
+<div class="col-md-3 movie-album">
+<div class="card mb-3 card-serie">
+<img class="card-img-top" src="img/black.jpg" alt="" />
+<button
+class="btn btn-primary btn-watch"
+type="button"
+data-bs-toggle="modal"
+data-bs-target="#watchNowModal"
+data-bs-image="img/black.jpg"
+data-bs-title="Black Adam"
+>
+More Details
+</button>   
+</div>
+</div>
+</div>
+</div>
+        
+
+
+
+<!-- Pagination -->
+<nav aria-label="Page navigation example ">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    <!-- Footer area -->
+    <footer class="bg-light py-3">
+      <div class="container text-center">
+        <p>&copy; Moveflix 2023</p>
+       
+
+        <!-- Modal -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close btn-close-signin-modal"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <div class="signin">
+            <div class="pb_41">Sign in</div>
+            <div>
+              <input
+                class="form-control input_email"
+                type="email"
+                id="email"
+                placeholder="Enter phone number or email address"
+              />
+            </div>
+
+            <div
+              class="form-check form-switch d-flex justify-content-center align-items-center mt_24"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                style="margin: 0"
+              />
+              <label
+                class="form-check-label or_text"
+                for="flexSwitchCheckDefault"
+                >Keep me signed in</label
+              >
+            </div>
+
+            <div class="d-flex flex-column">
+              <button type="button" class="btn btn-warning mt_24 btn_signin">
+                Sign In
+              </button>
+              <button type="button" class="btn btn-link mt_24 btn_signup">
+                Sign Up
+              </button>
+            </div>
+
+            <div class="or_text mt_24" style="text-align: center">or</div>
+
+            <div class="d-flex flex-column mt_24" style="gap: 12px">
+              <button type="button" class="btn btn-light btn_sosmed">
+                <i class="bi bi-google"></i>
+                Continue with Google
+              </button>
+              <button type="button" class="btn btn-light btn_sosmed">
+                <i class="bi bi-facebook"></i>
+                Continue with Facebook
+              </button>
+              <button type="button" class="btn btn-light btn_sosmed">
+                <i class="bi bi-apple"></i>
+                Continue with Apple
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal 2 -->
+<!-- Modal 2 -->
+<div id="watchNowModal" class="modal">
+  <section id="slider-container">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="btn-close btn-close-signin-modal"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+    <!-- Slider box -->
+    <div class="slider-box">
+      <!-- img -->
+      <div class="slider-img">
+        <img src="img/aadc.jpg" alt="poster" id="mainImage" />
+      </div>
+      <!-- Details -->
+      <div class="slider-details">
+        <!-- Tittle -->
+        <strong id="modal-title">Ada Apa Dengan Cinta</strong>
+        <div class="rating">
+          <!--Full Star -->
+          <a href="#"><i class="bi bi-star-fill"></i></a>
+          <!--Full Star -->
+          <a href="#"><i class="bi bi-star-fill"></i></a>
+
+          <!--Full Star -->
+          <a href="#"><i class="bi bi-star-fill"></i></a>
+
+          <!--Full Star -->
+          <a href="#"><i class="bi bi-star-fill"></i></a>
+
+          <!--Full Star -->
+          <i class="bi bi-star"></i>
+        </div>
+
+        <!-- Movie Details -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt
+          modi voluptas porro odio nemo officiis impedit corrupti sunt
+          eveniet!
+        </p>
+
+        <!-- Movie cast -->
+        <div class="movie-cast">
+          <a href="#"
+            ><img src="img/nicho.jpeg" title="Nicholas" alt="cast"
+          /></a>
+          <a href="#"><img src="img/dian.jpeg" title="Dian" alt="cast" /></a>
+          <a href="#"
+            ><img src="img/cinta-cast3.jpeg" title="Adinia" alt="cast"
+          /></a>
+          <a href="#"><img src="img/cinta-cast4.jpeg" title="Sissy" alt="cast" /></a>
+          <a href="#"
+            ><img src="img/cinta-cast5.jpeg" title="Titi Kamal" alt="cast"
+          /></a>
+          <a href="#" class="more-cast">9+</a>
+        </div>
+
+        <!-- BTns -->
+        <div class="cards-btns">
+          <a href="#" class="trailer-btn">Watch Trailer</a>
+          <a href="#" class="play-btn"
+            ><i class="bi bi-play-fill p-btn"></i>Play Now</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+  </body>
+</html>
